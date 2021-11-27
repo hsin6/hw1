@@ -179,5 +179,26 @@
 | 第二層 | 資料連接層 | 網路存取層 | 乙太網、Wi-Fi、PPP |
 | 第一層 | 實體層 | | |
 
-Port
-TCP/IP
+### Port
+*** 
+### TCP/IP
+***
+### 網路相關
+- route
+&rarr; Destination, Genmask：完整的網域
+&rarr; Gateway：這個網域是從哪個Gateway連接出去的，0.0.0.0表示這個路由是從本機傳送，有IP的話，
+                代表需要經過路由器才能傳出去
+&rarr; Iface：網路卡介面
+### 網路相關
+- route
+  - add : 新增一條路由規則
+  - del : 刪除一條路由規則
+  - -net : 目的地址是一個網路
+  - -host : 目的地址是一個主機
+  - target : 目的網路或主機
+  - netmask : 目的地址的網路掩碼
+  - gw : 路由資料包通過的閘道器
+  - dev : 為路由指定的網路介面
+- ping
+  - 常用網路檢測工具，可藉由發送 ICMP ECHO_REQUEST 封包，檢查自己與特定設備之間的網路是否暢通，
+    並同時測量網路連線的來回通訊延遲時間（round-trip delay time）。
